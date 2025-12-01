@@ -55,7 +55,7 @@ app.MapPut("/actor/{id}", async (DataContext context, Actor actor, int id) =>
 
 });
 
-app.MapDelete("/superhero/{id}", async (DataContext context, int id) =>
+app.MapDelete("/actor/{id}", async (DataContext context, int id) =>
 {
     var dbActor = await context.Actors.FindAsync(id);
     if (dbActor == null) return Results.NotFound("Not found");
